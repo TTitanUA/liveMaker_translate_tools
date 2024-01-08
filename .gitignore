@@ -1,0 +1,8 @@
+projects
+!projects/.gitkeep
+.env
+config.py
+.idea
+pylivemaker-tools-master
+__pycache__
+demo.py

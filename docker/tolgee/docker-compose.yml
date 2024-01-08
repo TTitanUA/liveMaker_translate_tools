@@ -1,0 +1,17 @@
+version: '3'
+
+volumes:
+  l2dtr-tolgee-data-stage:
+
+services:
+  l2dtr-tolgee:
+    image: tolgee/tolgee
+    restart: unless-stopped
+    ports:
+      - 52808:8080
+    environment:
+      - TOLGEE_AUTHENTICATION_INITIAL_PASSWORD=${TOLGEE_AUTHENTICATION_INITIAL_PASSWORD}
+      - TOLGEE_AUTHENTICATION_CREATE_INITIAL_USER=true
+      - TOLGEE_AUTHENTICATION_ENABLED=true
+      - TOLGEE_AUTHENTICATION_REGISTRATIONS_ALLOWED=false
+      - TOLGEE_AUTHENTICATION_USER_CAN_CREATE_ORGANIZATIONS=false
